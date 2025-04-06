@@ -13,7 +13,6 @@ IO.inspect(Series.sort(fruits))
 mountains = DataFrame.new(name: ["Everest", "K2", "Aconcagua"], elevation: [8848, 8611, 6962])
 
 IO.inspect(mountains)
-DataFrame.print(mountains)
 
 DF.filter(mountains, elevation > mean(elevation))
 |> IO.inspect()
@@ -30,8 +29,7 @@ df = DataFrame.new(
   column1: [1, 2, 3],
   column2: [4, 5, 6]
 )
-
-DataFrame.print(df)
+IO.inspect(df)
 
 # df.indexに相当するものは無さそう。
 # 新しく列を追加したいときは、DataFrame.put や DataFrame.mutate
